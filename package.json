@@ -19,7 +19,7 @@
     "ddos": "^0.2.1",
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
-    "ejs": "~0.8.5",
+    "ejs": "~2.5.5",
     "express": "^4.17.1",
     "express-auto-sanitize": "^1.1.0",
     "express-session": "^1.16.2",
