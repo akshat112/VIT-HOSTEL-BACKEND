@@ -1,0 +1,45 @@
+<% include ./partial/header.ejs %>
+<div class="form">
+<form method="post" action="/guard" autocomplete="off">
+        <label class="floating-label">Full Name</label>
+        <input type="text" class="form-control" name="name" required maxlength="26" />
+        <br/>
+        <label class="floating-label">Duty Time</label>
+        <br/>
+        <select name="duty" required class="custom-select">
+            <option value="morning" selected>Morning</option>
+            <option value="evening">Evening</option>
+        </select>
+        <br/>
+        <label class="floating-label">Hostel Type</label>
+        <br/>
+        <select name="type" required class="custom-select">
+            <option value="boys" selected>Boys</option>
+            <option value="girls">Girls</option>
+        </select>
+        <br/>
+        <label class="floating-label">Block </label>
+        <br/>
+        <select name="block" class="custom-select" required>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="C">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+            <option value="f">F</option>
+            <option value="g">G</option>
+            <option value="h">H</option>
+            <option value="j">J</option>
+            <option value="k">K</option>
+            <option value="l">L</option>
+            <option value="m" selected>M</option>
+            <option value="n">N</option>
+            <option value="p">P</option>
+            <option value="q">Q</option>
+        </select>
+        <br/>
+        <button type="submit" >Get Inside</button>
+</form>
+</div>
+<a class="btn btn-primary btn-lg mt-40" href="/">Go To Home Page</a>
+<% include ./partial/footer.ejs %>

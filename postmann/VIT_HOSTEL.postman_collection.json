@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "e3e7e2ab-456b-4307-86f6-73a02c7d1ef9",
+		"name": "VIT_HOSTEL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student Routes",
+			"item": [
+				{
+					"name": "Student Registration & Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0f6f77ab-81ce-4249-87eb-f05c44cf0253",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "num",
+									"value": "333",
+									"type": "text"
+								},
+								{
+									"key": "bed",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "block",
+									"value": "Q",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "boys",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "NIKHIL JAIN",
+									"type": "text"
+								},
+								{
+									"key": "registerNumber",
+									"value": "17BCE2250",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/students/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clean request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b9e9fa35-a821-40fa-92dc-7cc365d56b77",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.msg).to.eql(\"OK\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data).to.eql(\"done\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/students/clean/request/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"clean",
+								"request",
+								""
+							]
+						},
+						"description": "room clean rrquest"
+					},
+					"response": []
+				},
+				{
+					"name": "Cleaning is done",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "69f203ce-2e01-4e51-b5f1-d69e8844e6d6",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.msg).to.eql(\"OK\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "bribe",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/students/clean/request/complete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"clean",
+								"request",
+								"complete"
+							]
+						},
+						"description": "Room cleaning is done"
+					},
+					"response": []
+				},
+				{
+					"name": "App Feedback",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "37b5228e-054d-464e-8e38-0523bccec1d5",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is OK\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.msg).to.eql(\"OK\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data).to.eql(\"ALL is WELL\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "UI/UX",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "You can improve ui/ux  by changing background colours.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/students/app/feedback/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"app",
+								"feedback",
+								""
+							]
+						},
+						"description": "Taking app feedback"
+					},
+					"response": []
+				},
+				{
+					"name": "Room Complains",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4f017990-a194-4d73-bd2a-e13795e0f985",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is OK\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.msg).to.eql(\"OK\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.data).to.eql(\"ALL is WELL\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "Electroincs",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "AC is not cooling",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/students/report/complain",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"report",
+								"complain"
+							]
+						},
+						"description": "send room complains"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Guard And Superwiser",
+			"item": [
+				{
+					"name": "Login/Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "block",
+									"value": "Q",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Jigri Singh",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "boys",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/guard/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								""
+							]
+						},
+						"description": "Login and register option for guard"
+					},
+					"response": []
+				},
+				{
+					"name": "Request LIsts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/guard/pending/request",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								"pending",
+								"request"
+							]
+						},
+						"description": "LIsts of pending request not performed\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Clean Done List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/guard/request/confirmation/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								"request",
+								"confirmation",
+								"list"
+							]
+						},
+						"description": "LIst contains request those are done"
+					},
+					"response": []
+				},
+				{
+					"name": "Cleaning confirmed",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "11334c",
+									"type": "text"
+								},
+								{
+									"key": "worker",
+									"value": "JaiSingh yadav",
+									"description": "worker name who done cleaning",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/guard/clean/request/confirmed/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								"clean",
+								"request",
+								"confirmed",
+								""
+							]
+						},
+						"description": "Room cleaning is confirmed by Guard by entering token"
+					},
+					"response": []
+				},
+				{
+					"name": "List of Complains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/guard/complain/list",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								"complain",
+								"list"
+							]
+						},
+						"description": "LIst of Complains given by student regarding anything related to hostel"
+					},
+					"response": []
+				},
+				{
+					"name": "Complain resloved",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/guard/complains/complete?uid=f5fdcbbe-09e8-4b7b-a810-6731633f9d15",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guard",
+								"complains",
+								"complete"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "f5fdcbbe-09e8-4b7b-a810-6731633f9d15"
+								}
+							]
+						},
+						"description": "Complain is resolved and it confirmed by guard"
+					},
+					"response": []
+				}
+			],
+			"description": "Routes for guard and superwiser app"
+		}
+	]
+}

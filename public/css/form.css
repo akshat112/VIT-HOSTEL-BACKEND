@@ -1,0 +1,40 @@
+body{
+    background-color: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+}
+
+fieldset{
+    padding: 5px;
+    border: 3px dashed blue;
+}
+
+.form-control, select{
+    border: none;
+    border-bottom: 2px grey solid;
+    border-right: 1px grey solid;
+    border-radius:3px;
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 20px;   
+}
+
+select{
+    text-align: center;
+}
+
+.form{
+    width: 25%;
+    margin: auto;
+    border: 0.9px lightslategrey outset;
+    border-radius: 10px;
+    padding: 25px; 
+}
+
+.form-btn{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    background-color: skyblue;
+    border: none;
+    outline: none;
+}

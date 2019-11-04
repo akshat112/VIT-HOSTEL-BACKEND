@@ -1,0 +1,13 @@
+<% include ./partial/header.ejs %>
+<nav>
+    <a class="nav-item" href="/">Home</a>
+    <a class="nav-item" href="/about-us">About Us</a>
+    <div class="dropdown">
+        <button class="drop-btn">Login</button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="/page/students/auth">Students</a>
+            <a class="dropdown-item" href="/page/guards/auth">Guard</a>    
+        </div>
+    </div>
+</nav>
+<% include ./partial/footer.ejs %>

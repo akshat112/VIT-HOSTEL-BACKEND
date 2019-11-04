@@ -1,0 +1,46 @@
+{
+  "name": "VIT-HOSTEL",
+  "version": "1.0.0",
+  "description": "a hostel app for vit student by vitians",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=PRODUCTION node ./bin/www",
+    "dev": "NODE_ENV=DEV nodemon ./bin/dev",
+    "rn_win": "nodemon ./bin/dev"
+  },
+  "author": "AKSHAT BHANCHAWAT, SARTHAK SURANA",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "cookies": "^0.7.3",
+    "cors": "^2.8.5",
+    "ddos": "^0.2.1",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "ejs": "~0.8.5",
+    "express": "^4.17.1",
+    "express-auto-sanitize": "^1.1.0",
+    "express-session": "^1.16.2",
+    "helmet": "^3.21.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.5",
+    "morgan": "^1.9.1",
+    "otp-generator": "^1.1.0",
+    "static-favicon": "~1.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshat112/VIT-HOSTEL-BACKEND.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akshat112/VIT-HOSTEL-BACKEND/issues"
+  },
+  "homepage": "https://github.com/akshat112/VIT-HOSTEL-BACKEND#readme"
+}

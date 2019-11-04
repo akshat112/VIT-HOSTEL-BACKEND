@@ -1,0 +1,58 @@
+<% include ./partial/header.ejs %>
+<div class="form">
+<form method="post" action="/students" autocomplete="off">
+    <fieldset>
+        <legend>#Hostel-Life</legend>
+        <label >Full Name</label> 
+        <br/>
+        <input type="text" class="form-control" name="name" required maxlength="26" />
+        <br/>
+        <label >Registration Number</label> 
+        <br/>
+        <input type="text" class="form-control" name="registerNumber" minlength="9" maxlength="9" required />
+        <br/>
+        <label >Room Number</label> 
+        <br/>
+        <input type="text" class="form-control" name="num" minlength="3" maxlength="4" required />
+        <br/>
+        <label >Type</label> 
+        <br/>
+        <select name="type" required class="custom-select">
+            <option value="boys" selected>Boys</option>
+            <option value="girls">Girls</option>
+        </select>
+        <br/>
+        <label >Room Size</label>
+        <br/>
+        <select name="bed" class="custom-select" required>
+            <option value="1">1 Bed</option>
+            <option value="2">2 Bed</option>
+            <option value="3">3 Bed</option>
+            <option value="4">4 Bed</option>
+            <option value="6" selected>6 Bed</option>
+        </select>
+        <br/>
+        <label >Block </label> <br/>
+        <select name="block" class="custom-select" required>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="C">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+            <option value="f">F</option>
+            <option value="g">G</option>
+            <option value="h">H</option>
+            <option value="j">J</option>
+            <option value="k">K</option>
+            <option value="l">L</option>
+            <option value="m" selected>M</option>
+            <option value="n">N</option>
+            <option value="p">P</option>
+            <option value="q">Q</option>
+        </select>
+        <button type="submit" class="form-btn">Get Inside</button>
+    </fieldset>
+</form>
+</div>
+<a class="btn btn-primary btn-lg mt-40" href="/">Go To Home Page</a>
+<% include ./partial/footer.ejs %>
